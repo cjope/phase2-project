@@ -1,4 +1,5 @@
 import {NavLink} from "react-router-dom"
+import Filter from "./Filter"
 
 function NavBar(){
     return(
@@ -10,8 +11,7 @@ function NavBar(){
                 <NavLink className="nav-bar" to="/SignIn">Sign In</NavLink>
                 <div style={{flex:2}}>
                     <div style={{float:"right", marginRight:"5%", marginTop:"2%"}}>
-                        <input style={{borderColor:"orange"}}></input>
-                        <button style={{backgroundColor:"orange"}}>Search</button>
+                        <Filter/>
                     </div>
                 </div>
             </div>
