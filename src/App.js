@@ -19,24 +19,22 @@ function App(){
         .then(data => setMovies(data.results))
     }
     
+    console.log(page)
+
     useEffect(()=>{
-        fetchMovies()
+        fetchMovies(page)
         window.scrollTo(0,0)
     },[page])
 
     return(
         <div>
             <NavBar />
-            <div>
-                <button className="page-button-prev" onClick={()=>setPage(page-1)}>Prev Page</button>
-                <button className="page-button-next" onClick={()=>setPage(page+1)}>Next Page</button>
-            </div>
             <Switch>
             <Route exact path="/">
                 <Home/>
             </Route>
             <Route exact path="/Movies" >
-                {movies&&<Movies movies={movies} />}
+                {movies&&<Movies movies={movies} page={page} setPage={setPage} />}
             </Route>
             <Route exact path="/MyMovies">
                 <MyMovies/>
@@ -46,10 +44,9 @@ function App(){
             </Route>
             <Filter />
             </Switch>
-            <div>
-                <button className="page-button-prev" onClick={()=>setPage(page-1)}>Prev Page</button>
-                <button className="page-button-next" onClick={()=>setPage(page+1)}>Next Page</button>
-            </div>
+            {/* <div className="page-buttons">
+                <button className="button" onClick={()=>setPage(page+1)}>Next Page</button>
+            </div> */}
         </div>
     )
 }
