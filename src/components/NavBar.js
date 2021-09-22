@@ -1,7 +1,14 @@
-import {NavLink} from "react-router-dom"
+import {NavLink, /*useHistory*/} from "react-router-dom"
 import Filter from "./Filter"
 
 function NavBar(){
+
+    // const history = useHistory()
+
+    // function handleClick( ){
+    //     history.push("/MyMovies")
+    // }
+
     return(
         <div className="nav-all">
             <div style={{display:"flex", flex:5}}>
@@ -15,6 +22,7 @@ function NavBar(){
                     </div>
                 </div>
             </div>
+            {/* <button onClick={handleClick}>Test</button> */}
         </div>
     )
 }

@@ -92,9 +92,10 @@ html {
   font-size: var(--ytd-user-comment_-_font-size);
   font-weight: var(--ytd-user-comment_-_font-weight);
   line-height: var(--ytd-user-comment_-_line-height);
-  letter-spacing: var(--ytd-user-comment_-_letter-spacing);
+  letter-spacing: var(--ytd-user-comment_-_letter-spacing); 
   background-color: white;
-  width: 30%;
-  margin: auto;
-  text-align: left;
+  width: 50%;
+  height: 200px;
+  margin: auto; 
+  text-align: left; 
 }

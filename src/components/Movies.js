@@ -1,8 +1,22 @@
-function Movies({movies, page, setPage}){
 
-    function handleLike(e){
-        console.log(`${e.title} was liked`)
+
+
+
+function Movies({movies, page, setPage, likedMovies, setLikedMovies}){
+
+    
+
+
+    function handleLike(movie){
+        const movieID = movie.id
+        const movieTitle = movie.title
+        setLikedMovies({movieID, movieTitle})
+        console.log(`movieID from Movies handleLike: ${movieID}`)
+        console.log(`movieTitle from Movies handleLike ${movieTitle}`)
     }
+
+
+
 
     return(
         <div >
